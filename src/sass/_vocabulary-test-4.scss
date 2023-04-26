@@ -1,0 +1,70 @@
+#vocabulary-test-4 {
+  .body-contents {
+    justify-content: space-evenly !important;
+  }
+  .voca-contents {
+    min-height: 250px !important;
+  }
+  .quiz-contents {
+    @include quiz-contents;
+    padding: 0px;
+    .question {
+      @include question;
+    }
+  }
+  .voca-box {
+    @include voca-box;
+    font-size: 2em;
+    @include portrait-mobile {
+      font-size: 1.4em;
+      padding: 0px;
+    }
+    @include portrait {
+      font-size: 2em !important;
+      padding: 0px;
+    }
+    .voca-item {
+      margin: auto;
+      .voca-contents {
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .word {
+          font-size: 1.5em;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .sentence {
+          margin-bottom: 15px;
+        }
+        .translation {
+          font-size: 0.8em;
+          color: #b6b6b6;
+        }
+      }
+    }
+  }
+  .answer-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    @include portrait-mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+    .answer-item {
+      @include answer-item;
+      position: relative;
+      &.correct {
+        @include active-correct;
+      }
+      &.incorrect {
+        @include active-incorrect;
+      }
+      .number {
+        @include answer-number;
+      }
+    }
+  }
+}

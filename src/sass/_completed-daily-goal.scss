@@ -1,0 +1,60 @@
+#completed-daily-goal {
+  @include modal-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box {
+    min-width: 320px;
+    min-height: 246px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .reward-item {
+      position: relative;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      .items {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .confetti-box {
+          width: 33%;
+        }
+        .item-box {
+          position: relative;
+        }
+      }
+    }
+    .reward-detail {
+      display: grid;
+      gap: 6px;
+      text-align: center;
+      color: #000000;
+      .title {
+        font-weight: 600;
+        font-size: 2em;
+      }
+      .sentence {
+        font-size: 0.95em;
+        font-weight: 500;
+        &:nth-last-child(2) {
+          color: #cccccc;
+          font-size: 0.85em;
+          margin-bottom: 20px;
+        }
+      }
+      .btn-gloss-blue {
+        button {
+          @include btn-gloss-blue;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+#listening-activity-2 {
+  .body-contents,
+  .quiz-contents-top {
+    background-color: transparent !important;
+    border: none !important;
+    margin-bottom: 10px;
+  }
+  .question {
+    @include question;
+    .btn-listen {
+      @include btn-listen;
+      display: flex;
+      align-items: center;
+      position: relative;
+      img {
+        position: absolute;
+        z-index: 1;
+      }
+      span {
+        color: #ce3c43;
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        border: 1px solid #ce3c43;
+        padding: 5px 15px 6px 55px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 100px;
+        @include dark-mode {
+          color: #ffffff;
+        }
+      }
+    }
+    .quiz-sentence {
+      @include quiz-sentence;
+    }
+  }
+  .answer-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @include portrait-mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .answer-item {
+      @include answer-item;
+      // max-height: 230px;
+      min-height: 210px;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      justify-content: center;
+      position: relative;
+      padding: 0;
+      box-shadow: none;
+      @include portrait-mobile {
+        max-height: 120px;
+        min-height: 0px;
+        padding: 0;
+        height: auto !important;
+      }
+      .word {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #0e0f20;
+        text-shadow: -1px 0px 1px #ffffff, 0px 1px 1px #ffffff,
+          1px 0px 1px #ffffff, 0px -1px 1px #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        @include portrait-mobile {
+          font-size: 1.6em;
+        }
+        @include dark-mode {
+          color: #ffffff;
+          text-shadow: -1px 0px 1px #000000, 0px 1px 1px #000000,
+            1px 0px 1px #000000, 0px -1px 1px #000000;
+        }
+      }
+    }
+  }
+}

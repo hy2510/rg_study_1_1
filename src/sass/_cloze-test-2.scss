@@ -1,0 +1,65 @@
+#cloze-test-2 {
+  .body-contents {
+    @include portrait-mobile {
+      justify-content: start !important;
+    }
+    @include landscape {
+      justify-content: start !important;
+    }
+    @include portrait {
+      justify-content: start !important;
+    }
+  }
+  .question {
+    .btn-listen {
+      @include btn-listen;
+    }
+  }
+  .sentence-box {
+    @include sentence-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 100% !important;
+    margin-bottom: 0px;
+    padding: 25px 15px;
+    .sentence-item {
+      @include sentence-item;
+      line-height: 1.8em;
+      padding: 0px;
+      &:nth-child(1) {
+        padding: 0px;
+      }
+      &:nth-last-child(1) {
+        padding: 0px;
+      }
+      @include portrait-mobile {
+        padding: 0px;
+        font-size: 1.3em;
+        line-height: 1.8em;
+      }
+      .typing {
+        position: relative;
+        input {
+          margin: 0px 10px;
+          height: 30px;
+          padding: 5px 15px;
+          border-radius: 10px;
+          font-size: 1em;
+          background-color: transparent;
+          border: 1.25px solid #00000030;
+          @include dark-mode {
+            color: #ffffff;
+            border: 1.25px solid #ffffff10;
+          }
+        }
+      }
+    }
+  }
+  .bottom-space {
+    height: 90px;
+    @include portrait-mobile {
+      display: none;
+    }
+  }
+}

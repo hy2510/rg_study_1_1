@@ -1,0 +1,60 @@
+#penalty-vocabulary {
+  .title {
+    @include penalty-title;
+  }
+  .typing {
+    margin-bottom: 15px;
+    position: relative;
+    @mixin font-style {
+      width: calc(100% - 30px);
+      height: 55px;
+      padding: 0px 15px;
+      border-radius: 15px;
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: "Courier New", Courier, monospace;
+      @include portrait-mobile {
+        border-radius: 12px;
+        font-size: 1.3em;
+      }
+    }
+    input {
+      @include font-style;
+      background-color: transparent;
+      border: 1.25px solid #00000030;
+      @include dark-mode {
+        color: #ffffff;
+        border: 1.25px solid #ffffff10;
+      }
+    }
+    .bg-text {
+      @include font-style;
+      background-color: #ffffff;
+      color: #d2d2d2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      z-index: -1;
+      @include dark-mode {
+        background-color: #0e0f20;
+        color: #505050;
+      }
+    }
+  }
+  .enter {
+    display: flex;
+    justify-content: end;
+    .btn-gloss-blue {
+      @include btn-gloss-blue;
+      @include portrait-mobile {
+        width: 100%;
+      }
+    }
+    .btn-gloss-gray {
+      @include btn-gloss-gray;
+    }
+  }
+}

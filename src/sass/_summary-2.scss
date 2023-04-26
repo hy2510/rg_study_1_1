@@ -1,0 +1,43 @@
+#summary-2 {
+  .summary-sentence-box {
+    margin-bottom: 0px !important;
+    @include sentence-box;
+    .summary-sentence-item {
+      @include sentence-item;
+      @include portrait-mobile {
+        font-size: 1em;
+      }
+    }
+  }
+  .ico-up {
+    @include ico-arrow-up;
+  }
+  .answer-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    @include portrait-mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+    @include portrait {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .answer-item {
+      @include answer-item;
+      position: relative;
+      &.correct {
+        @include active-correct;
+      }
+      &.incorrect {
+        @include active-incorrect;
+      }
+      .number {
+        @include answer-number;
+      }
+    }
+    .chance {
+      @include btn-hint;
+    }
+  }
+}

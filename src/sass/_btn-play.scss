@@ -1,0 +1,74 @@
+.btn-play {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent !important;
+  width: 48px;
+  height: 50px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url(../assets/images/ico_speaker.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include portrait-mobile {
+    width: 44px;
+    height: 48px;
+  }
+  @include landscape-mobile {
+    width: 44px;
+    height: 48px;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  img {
+    position: absolute;
+    z-index: 1;
+    @include portrait-mobile {
+      width: 44px;
+      height: 48px;
+    }
+  }
+  .progress-box {
+    width: 100%;
+    height: 36px;
+    color: #ce3c43;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ce3c43;
+    padding-left: 55px;
+    padding-right: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 100px;
+    @include portrait-mobile {
+      height: 33px;
+    }
+    // @include dark-mode {
+    //   color: #ffffff;
+    // }
+    .text {
+      position: absolute;
+      left: 55px;
+      @include portrait-mobile {
+        font-size: 0.9em;
+      }
+    }
+  }
+  #progress {
+    width: 0%;
+    height: 36px;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    padding-left: 55px;
+    padding-right: 20px;
+    background-color: #ce3c4310;
+    border-radius: 100px;
+    transition: width 1s;
+  }
+}

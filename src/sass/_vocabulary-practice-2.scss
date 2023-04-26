@@ -1,0 +1,98 @@
+#vocabulary-practice-2 {
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include question;
+    .btn-listen {
+      @include btn-listen;
+      #progress {
+        border: none;
+        background-color: #ce3c4330;
+        display: none;
+        transition: width 1s;
+      }
+    }
+    .next {
+      display: flex;
+      justify-content: end;
+      .btn-gloss-gray {
+        @include btn-gloss-gray;
+      }
+      .btn-gloss-blue {
+        @include btn-gloss-blue;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .voca-box {
+    @include voca-box;
+    font-size: 2em;
+    @include portrait-mobile {
+      font-size: 2em;
+      padding: 0px;
+    }
+    @include portrait {
+      font-size: 2em !important;
+      padding: 0px;
+    }
+    .btn-chev {
+      @include btn-chev;
+    }
+    .voca-image {
+      width: calc(28vh * 1.38);
+      max-width: 340px;
+      height: 28vh;
+      max-height: 250px;
+      border-radius: 15px;
+      margin: auto;
+      overflow: hidden;
+      transform: scale(0.9);
+      img {
+        height: 100%;
+        transform: scale(1.3) translate(4.5%, -0.5%);
+      }
+    }
+    .word {
+      font-size: 1.4em;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #38b4fe;
+      @include portrait-mobile {
+        font-size: 1em;
+      }
+    }
+    .sentence {
+      margin-bottom: 30px;
+      font-size: 0.9em;
+      padding: 8px 15px;
+      margin: 0px 3px 20px;
+      border-radius: 12px;
+      background-color: #f5fbfb;
+      @include portrait-mobile {
+        font-size: 0.6em;
+      }
+      @include dark-mode {
+        background-color: #0e0f20;
+      }
+      b {
+        color: #38b4fe;
+      }
+    }
+    .voca-item-indicator {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+        background-color: #e0e0e0;
+        &.on {
+          background-color: #38b4fe;
+        }
+      }
+    }
+  }
+}

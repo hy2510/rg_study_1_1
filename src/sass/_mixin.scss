@@ -1,0 +1,185 @@
+:root {
+  // font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  // font-family: "Baloo 2", cursive;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
+  @media (prefers-color-scheme: dark) {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+}
+
+$light-mode: "(prefers-color-scheme: light)";
+$dark-mode: "(prefers-color-scheme: dark)";
+
+// 폰트
+$font-baloo: "'Baloo 2', cursive";
+
+// 모서리 둥글기
+$rounded-bs: "15px";
+$rounded-lg: "25px";
+
+// viewport
+$sm: "(max-width: 576px)";
+$smover: "(min-width: 577px)";
+$md: "(max-width: 768px)";
+$mdover: "(min-width: 769px)";
+$lg: "(max-width: 990px)";
+$lgover: "(min-width: 991px)";
+$xl: "(max-width: 1120px)";
+$xlover: "(min-width: 1121px)";
+$xxl: "(max-width: 1440px)";
+$xxlover: "(min-width: 1441px)";
+$xxxl: "(max-width: 1920px)";
+$xxxlover: "(min-width: 1921px)";
+
+// 모바일 세로모드
+@mixin portrait-mobile {
+  @media (orientation: portrait) {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+}
+// 모바일 가로모드
+@mixin landscape-mobile {
+  @media (orientation: landscape) {
+    @media screen and (max-height: 576px) {
+      @content;
+    }
+  }
+}
+// 태블릿 세로모드
+@mixin portrait {
+  @media (orientation: portrait) {
+    @media (min-width: 577px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+// 태블릿 가로모드
+@mixin landscape {
+  @media (orientation: landscape) {
+    @media (min-height: 577px) and (max-width: 1366px) {
+      @content;
+    }
+  }
+}
+
+// 스마트폰 세로
+@mixin mobile {
+  @media (max-width: 499px) {
+    @content;
+  }
+}
+
+// 스마트폰 가로
+@mixin mobile-hori {
+  @media (min-height: 320px) and (max-height: 499px) {
+    @content;
+  }
+}
+
+// 작은 태블릿 세로
+@mixin mini-tablets {
+  @media ((min-height: 900px) and (max-height: 1023px)) and ((min-width: 600px) and (max-width: 899px)) {
+    @content;
+  }
+}
+
+// 작은 태블릿 가로
+@mixin mini-tablets-hori {
+  @media ((min-height: 600px) and (max-height: 899px)) and ((min-width: 900px) and (max-width: 1023px)) {
+    @content;
+  }
+}
+
+// 태블릿 세로
+@mixin tablets {
+  @media ((min-height: 1024px) and (max-height: 1365px)) and ((min-width: 768px) and (max-width: 1023px)) {
+    @content;
+  }
+}
+
+// 태블릿 가로
+@mixin tablets-hori {
+  @media ((min-height: 768px) and (max-height: 1023px)) and ((min-width: 1024px) and (max-width: 1365px)) {
+    @content;
+  }
+}
+
+// 대형 태블릿 세로
+@mixin lg-tablets {
+  @media ((min-height: 1366px) and (max-height: 1439px)) and ((min-width: 1024px) and (max-width: 1119px)) {
+    @content;
+  }
+}
+
+// 대형 태블릿 가로
+@mixin lg-tablets-hori {
+  @media ((min-width: 1366px) and (max-width: 1439px)) and ((min-height: 1024px) and (max-height: 1119px)) {
+    @content;
+  }
+}
+
+// 랩탑
+@mixin mini-labtop {
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin labtop {
+  @media (min-width: 1440px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+// PC (FHD)
+@mixin pc-fhd {
+  @media (min-width: 1920px) and (max-width: 2569px) {
+    @content;
+  }
+}
+
+// 라이트모드
+@mixin light-mode {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+// 다크모드
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// 백드랍필터
+@mixin bg-blur {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}

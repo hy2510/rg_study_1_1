@@ -1,0 +1,122 @@
+#vocabulary-test-3 {
+  .voca-box {
+    @include voca-box;
+    font-size: 1.5em;
+    padding: 20px;
+    @include portrait-mobile {
+      font-size: 1.2em;
+      padding: 0px;
+    }
+    @include portrait {
+      font-size: 1.5em;
+    }
+    .voca-item {
+      width: 100%;
+      .typing {
+        width: 100%;
+        margin-bottom: 25px;
+        position: relative;
+        input {
+          position: relative;
+          z-index: 1;
+          width: calc(100% - 32.5px);
+          margin: 0px;
+          height: 40px;
+          padding: 10px 15px;
+          border-radius: 15px;
+          font-size: 1.5em;
+          background-color: transparent;
+          font-family: "Courier New", Courier, monospace;
+          font-weight: bold;
+          border: 1.25px solid #00000030;
+          background-color: #ffffff;
+          @include dark-mode {
+            color: #ffffff;
+            border: 1.25px solid #ffffff10;
+            background-color: #0e0f20;
+          }
+        }
+        .bg-text {
+          font-size: 1.5em;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: calc(100% - 33px);
+          margin: 0px;
+          height: 40px;
+          padding: 11.5px 16.5px;
+          display: flex;
+          align-items: center;
+          z-index: 0;
+          font-family: "Courier New", Courier, monospace;
+          font-weight: bold;
+          color: #d2d2d2;
+          border-radius: 15px;
+          background-color: #ffffff;
+          @include dark-mode {
+            background-color: #0e0f20;
+            color: #505050;
+          }
+        }
+        .remain {
+          color: #b6b6b6;
+          font-size: 0.8em;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 20px;
+          display: flex;
+          align-items: center;
+          .enter {
+            position: absolute;
+            right: -8px;
+            z-index: 2;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #0e0f20;
+            color: #ffffff;
+            border-radius: 10px;
+            img {
+              width: 15px;
+            }
+          }
+        }
+      }
+      .word,
+      .sentence,
+      .translation {
+        padding: 0px 15px;
+      }
+      .word {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+      .sentence {
+        margin-bottom: 15px;
+        b {
+          color: #38b4fe;
+        }
+      }
+      .translation {
+        font-size: 0.8em;
+        color: #b6b6b6;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .hint {
+    @include btn-hint;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #38b4fe;
+      border: 1px solid #38b4fe;
+    }
+  }
+}

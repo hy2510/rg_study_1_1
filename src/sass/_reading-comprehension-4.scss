@@ -1,0 +1,32 @@
+#reading-comprehension-4 {
+  .question {
+    @include question;
+    padding: 15px 10px 10px;
+    .btn-listen {
+      @include btn-listen;
+    }
+    .quiz-sentence {
+      @include quiz-sentence;
+    }
+  }
+  .answer-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    @include portrait-mobile {
+      gap: 10px;
+    }
+    .answer-item {
+      @include answer-item;
+      &.correct {
+        @include active-correct;
+      }
+      &.incorrect {
+        @include active-incorrect;
+      }
+      .number {
+        @include answer-number;
+      }
+    }
+  }
+}

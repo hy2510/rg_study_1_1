@@ -1,0 +1,46 @@
+.correct-unit,
+.incorrect-unit {
+  display: none;
+}
+
+.correct-unit-on,
+.incorrect-unit-on {
+  width: 100%;
+  height: 12vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 0.3s !important;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  @include portrait-mobile {
+    font-size: 1.6em;
+    justify-content: start;
+    padding-left: 30px;
+  }
+  img {
+    position: absolute;
+    bottom: 3vh;
+    right: 10%;
+    max-width: 300px;
+    @include portrait-mobile {
+      max-width: 40vw;
+      right: 30px;
+    }
+  }
+}
+
+.correct-unit-on {
+  background-color: #289ee4;
+}
+
+.incorrect-unit-on {
+  background-color: #ce3c43;
+}

@@ -1,0 +1,69 @@
+#modal-writing-activity {
+  @include modal-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box {
+    @include modal-bg-box;
+    .img-leaf {
+      @include modal-bg-box-img-leaf;
+    }
+    .box-header {
+      @include modal-box-header;
+    }
+    .box-body {
+      @include modal-box-body;
+      text-align: center;
+      .score-board {
+        color: #999999;
+        font-weight: 600;
+        padding: 0px 5px;
+        margin-bottom: 20px;
+        .score-row {
+          display: flex;
+          &.header {
+            border-bottom: 2px solid #f2f2f2;
+            justify-content: center;
+            padding-bottom: 20px;
+            color: #000000;
+            font-size: 1.5em;
+          }
+          .score-col {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0px;
+            border-bottom: 1px solid #f2f2f2;
+            color: #000000;
+            &:nth-child(1) {
+              background: rgba(255, 255, 255, 0.3);
+              color: #929292;
+            }
+          }
+        }
+      }
+      .comment {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      .btn-gloss-gray {
+        width: 100%;
+        button {
+          @include btn-gloss-gray;
+          width: 100%;
+        }
+      }
+      .btn-gloss-brown {
+        width: 100%;
+        button {
+          @include btn-gloss-brown;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

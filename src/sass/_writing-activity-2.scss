@@ -1,0 +1,140 @@
+#writing-activity-2 {
+  .body-contents {
+    justify-content: start !important;
+  }
+  .tabs {
+    display: flex;
+    gap: 10px;
+    .tab-button {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #f2f2f2;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+      &.on {
+        color: #ffffff;
+        background: #3ab6ff;
+      }
+    }
+  }
+  .guide {
+    color: #3ab6ff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+  }
+  .writing-area {
+    position: relative;
+    min-height: 350px;
+    @include portrait-mobile {
+      min-height: 280px;
+    }
+    .typing {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      textarea {
+        width: calc(100% - 40px);
+        height: calc(100% - 60px);
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        padding-bottom: 40px;
+        font-size: 1.5em;
+        resize: none;
+        @include portrait-mobile {
+          font-size: 1.3em;
+        }
+      }
+    }
+    .typing-status {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      gap: 20px;
+      @include portrait-mobile {
+        display: block;
+        text-align: end;
+        font-size: 1em;
+      }
+      .limit {
+        color: #c0c0c0;
+      }
+      .words {
+        color: #000000;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding-top: 20px;
+    .save-button {
+      @include portrait-mobile {
+        width: 100%;
+      }
+      button {
+        @include btn-gloss-gray;
+        @include portrait-mobile {
+          height: 50px;
+          width: 100%;
+        }
+        height: 60px;
+        width: 150px;
+      }
+    }
+    .submit-button {
+      @include portrait-mobile {
+        width: 100%;
+      }
+      &.active {
+        button {
+          @include btn-gloss-blue;
+          @include portrait-mobile {
+            height: 50px;
+            width: 100%;
+          }
+          cursor: pointer !important;
+          height: 60px;
+          width: 150px;
+          &:active {
+            transform: scale(0.96) !important;
+          }
+        }
+      }
+      button {
+        @include btn-dim;
+        @include portrait-mobile {
+          height: 50px;
+          width: 100%;
+        }
+        height: 60px;
+        width: 150px;
+      }
+    }
+  }
+  .enter {
+    button {
+      @include btn-gloss-blue;
+      height: 60px;
+      width: 80px;
+      @include portrait-mobile {
+        height: 50px;
+        width: 70px;
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

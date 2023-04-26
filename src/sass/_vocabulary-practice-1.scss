@@ -1,0 +1,75 @@
+#vocabulary-practice-1 {
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include question;
+    .btn-listen {
+      @include btn-listen;
+      #progress {
+        border: none;
+        background-color: #ce3c4330;
+        display: none;
+        transition: width 1s;
+      }
+    }
+    .next {
+      display: flex;
+      justify-content: end;
+      .btn-gloss-gray {
+        @include btn-gloss-gray;
+        padding: 10px 20px;
+      }
+      .btn-gloss-blue {
+        @include btn-gloss-blue;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .voca-box {
+    @include voca-box;
+    position: relative;
+    .btn-chev {
+      @include btn-chev;
+    }
+    .voca-image {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent !important;
+      width: calc(30vh * 1.42);
+      max-width: 350px;
+      height: 30vh;
+      max-height: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      transform: scale(0.9);
+      &:active {
+        transform: scale(0.95);
+      }
+      img {
+        height: 100%;
+        transform: scale(1.25) translate(0, 2%);
+      }
+    }
+    .word {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent !important;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .voca-item-indicator {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+        background-color: #e0e0e0;
+        &.on {
+          background-color: #38b4fe;
+        }
+      }
+    }
+  }
+}

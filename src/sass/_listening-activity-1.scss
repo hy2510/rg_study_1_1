@@ -1,0 +1,130 @@
+#listening-activity-1 {
+  .body-contents,
+  .quiz-contents-top {
+    background-color: transparent !important;
+    border: none !important;
+    margin-bottom: 10px;
+  }
+  .body-sort {
+    padding-top: 0px !important;
+    height: 85% !important;
+  }
+  .question {
+    @include question;
+    .btn-listen {
+      @include btn-listen;
+      #progress {
+        border: none;
+        background-color: #ce3c4330;
+        display: none;
+        transition: width 1s;
+      }
+    }
+    .quiz-sentence {
+      @include quiz-sentence;
+    }
+  }
+  .answer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    @include portrait-mobile {
+      gap: 10px;
+    }
+    .answer-item {
+      -webkit-tap-highlight-color: transparent !important;
+      cursor: pointer;
+      position: relative;
+      justify-content: center;
+      padding: 0px !important;
+      height: auto;
+      width: calc(33.3% - 2vh);
+      @include portrait-mobile {
+        width: calc(50% - 2vh);
+      }
+      @include landscape {
+        gap: 12px;
+        width: calc(33.3% - 11vh);
+      }
+      &.correct {
+        @include active-correct;
+      }
+      &.incorrect {
+        @include active-incorrect;
+      }
+      &.check {
+        img {
+          opacity: 0;
+        }
+      }
+      .img-hat {
+        height: 77px;
+        background-size: calc(100% + 1px);
+        background-repeat: no-repeat;
+        background-position: left 0 bottom -2px;
+        @include portrait-mobile {
+          height: 42px;
+        }
+        @include landscape-mobile {
+          height: 50px;
+        }
+        @include landscape {
+          height: 65px;
+        }
+      }
+      .img-pic {
+        padding: 0px 8px 8px 8px;
+        border-radius: 0px 0px 12px 12px;
+        text-align: center;
+        position: relative;
+        @include portrait-mobile {
+          padding: 0px 4px 5px 4px;
+        }
+        .box {
+          padding-top: 5px;
+          background: #ffffff;
+          border-radius: 10px;
+        }
+      }
+      .word {
+        color: #ffffff;
+        font-size: 2.2em;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 0px 10px 10px;
+        text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+          0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+        animation-name: identifier;
+        animation-duration: 2s;
+        @include portrait-mobile {
+          font-size: 1.8em;
+        }
+        span {
+          margin-bottom: 20px;
+          @include portrait-mobile {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      @keyframes identifier {
+        0% {
+          opacity: 0;
+        }
+        70% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

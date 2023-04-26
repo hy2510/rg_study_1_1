@@ -1,0 +1,68 @@
+#penalty-summary {
+  .title {
+    @include penalty-title;
+  }
+  .sentence-box {
+    @include sentence-box;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    @include dark-mode {
+      background-color: #0e0f20;
+    }
+    .sentence-item {
+      @include sentence-item;
+      display: flex;
+      flex-wrap: wrap;
+      .typing {
+        position: relative;
+        @mixin font-style {
+          height: 30px;
+          padding: 0px 5px;
+          border-radius: 5px;
+          font-size: 1em;
+          font-weight: bold;
+          font-family: "Courier New", Courier, monospace;
+        }
+        input {
+          @include font-style;
+          background-color: transparent;
+          border: none;
+          @include dark-mode {
+            color: #ffffff;
+          }
+        }
+        .bg-text {
+          @include font-style;
+          margin-top: 1px;
+          background-color: #ffffff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          z-index: -1;
+          color: #d2d2d2;
+          @include dark-mode {
+            background-color: #0e0f20;
+            color: #9a9a9a;
+          }
+        }
+      }
+    }
+  }
+  .enter {
+    display: flex;
+    justify-content: end;
+    .btn-gloss-blue {
+      @include btn-gloss-blue;
+      @include portrait-mobile {
+        width: 100%;
+      }
+    }
+    .btn-gloss-gray {
+      @include btn-gloss-gray;
+    }
+  }
+}

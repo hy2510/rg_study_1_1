@@ -1,0 +1,61 @@
+#step-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000050;
+  .step-intro-modal {
+    width: 100%;
+    margin: 10px;
+    max-width: 480px;
+    min-height: 300px;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    overflow: hidden;
+    .title {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      color: #000000;
+      font-weight: 600;
+      .step {
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .quiz-type {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #999999;
+      }
+    }
+    .counter {
+      color: #ffffff;
+      font-size: 5em;
+      font-weight: 800;
+      height: 187px;
+      background-image: url("../assets/images/img_counter_sign.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        margin-bottom: 20px;
+      }
+    }
+    .bottom {
+      width: 100%;
+      height: 20px;
+      background-color: #95c133;
+    }
+  }
+  .animate__flipInX {
+    animation-duration: 0.9s;
+  }
+}

@@ -1,0 +1,41 @@
+#true-false {
+  .body-contents {
+    justify-content: space-around !important;
+  }
+  .question {
+    @include question;
+    padding: 15px 10px 10px;
+    .btn-listen {
+      @include btn-listen;
+    }
+    .quiz-sentence {
+      @include quiz-sentence;
+    }
+  }
+  .answer-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    @include portrait-mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+    .answer-item {
+      @include answer-item;
+      justify-content: center;
+      padding: 30px 0px;
+      @include portrait-mobile {
+        border-radius: 12px;
+      }
+      &.correct {
+        @include active-correct;
+      }
+      &.incorrect {
+        @include active-incorrect;
+      }
+      .number {
+        @include answer-number;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+#completed-earn-point {
+  @include modal-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box {
+    min-width: 320px;
+    min-height: 246px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .reward-item {
+      position: relative;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      .items {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .confetti-box {
+          width: 33%;
+        }
+        .item-box {
+          position: relative;
+          .earn-points {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: #{$font-baloo};
+            .point {
+              font-size: 3.2em;
+              font-weight: 800;
+              padding-bottom: 15px;
+              color: rgba(238, 169, 21, 1);
+            }
+            .text {
+              position: absolute;
+              font-size: 1.2em;
+              font-weight: 600;
+              bottom: 40px;
+              color: rgba(253, 189, 52, 1);
+            }
+          }
+        }
+      }
+    }
+    .reward-detail {
+      display: grid;
+      gap: 6px;
+      text-align: center;
+      color: #000000;
+      .title {
+        font-weight: 600;
+        font-size: 2em;
+      }
+      .sentence {
+        
+        font-size: 0.95em;
+        font-weight: 500;
+        &:nth-last-child(2) {
+          color: #cccccc;
+          font-size: 0.85em;
+          margin-bottom: 20px;
+        }
+      }
+      .btn-gloss-blue {
+        button {
+          @include btn-gloss-blue;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

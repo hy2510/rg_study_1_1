@@ -1,0 +1,1477 @@
+// KA 테마 - 정글
+.theme-jungle {
+  @include dark-mode {
+    background-image: url("../assets/themes/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/jungle/img_palm_bg_l.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/jungle/img_palm_bg_d.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/themes/img_cloud.svg"),
+        url("../assets/themes/img_cloud.svg"),
+        url("../assets/themes/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/themes/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/jungle/img_palm_l.svg"),
+      url("../assets/themes/jungle/img_palm_r.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 15px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/jungle/img_palm_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/jungle/img_palm_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/jungle/img_palm_l_dark.svg"),
+        url("../assets/themes/jungle/img_palm_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/jungle/img_palm_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/jungle/img_palm_l_dark.svg");
+      }
+    }
+  }
+  #listening-activity-1 {
+    .img-hat {
+      &.hat-0 {
+        background-image: url("../assets/themes/jungle/img_croker_01.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/jungle/img_hippo_01.svg");
+        }
+      }
+      &.hat-1 {
+        background-image: url("../assets/themes/jungle/img_croker_02.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/jungle/img_hippo_02.svg");
+        }
+      }
+      &.hat-2 {
+        background-image: url("../assets/themes/jungle/img_croker_03.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/jungle/img_hippo_03.svg");
+        }
+      }
+      &.hat-3 {
+        background-image: url("../assets/themes/jungle/img_croker_04.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/jungle/img_hippo_04.svg");
+        }
+      }
+      &.hat-4 {
+        background-image: url("../assets/themes/jungle/img_croker_05.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/jungle/img_hippo_05.svg");
+        }
+      }
+      @include portrait-mobile {
+        height: 40px;
+      }
+      @include landscape {
+        height: 60px;
+      }
+    }
+    .img-pic {
+      @include dark-mode {
+        .box {
+          background-image: url("../assets/themes/jungle/img_hippo_tooth.svg"),
+            url("../assets/themes/jungle/img_hippo_tooth.svg") !important;
+          background-repeat: no-repeat !important;
+          background-position: top left 2px, top right 2px !important;
+        }
+      }
+      &.pic-0 {
+        background-color: #4fa9fd;
+        .word {
+          background-color: #4fa9fd90;
+        }
+        @include dark-mode {
+          background-color: #93cbff;
+          .word {
+            background-color: #93cbff90;
+          }
+        }
+      }
+      &.pic-1 {
+        background-color: #914ffd;
+        .word {
+          background-color: #914ffd90;
+        }
+        @include dark-mode {
+          background-color: #cbacff;
+          .word {
+            background-color: #cbacff90;
+          }
+        }
+      }
+      &.pic-2 {
+        background-color: #fb75b5;
+        .word {
+          background-color: #fb75b590;
+        }
+        @include dark-mode {
+          background-color: #ffbddd;
+          .word {
+            background-color: #ffbddd90;
+          }
+        }
+      }
+      &.pic-3 {
+        background-color: #f5c93b;
+        .word {
+          background-color: #f5c93b90;
+        }
+        @include dark-mode {
+          background-color: #ffe593;
+          .word {
+            background-color: #ffe59390;
+          }
+        }
+      }
+      &.pic-4 {
+        background-color: #aad81a;
+        .word {
+          background-color: #aad81a90;
+        }
+        @include dark-mode {
+          background-color: #ebfeb0;
+          .word {
+            background-color: #ebfeb090;
+          }
+        }
+      }
+      @include portrait-mobile {
+        padding: 8px;
+      }
+      img {
+        width: calc(100% - 80px);
+        border-radius: 10px;
+        @include portrait-mobile {
+          width: 100%;
+        }
+        @include portrait {
+          width: 100%;
+        }
+        @include landscape {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+  }
+}
+
+// KA 테마 - 남극
+.theme-antarctica {
+  background-color: #e7f4ff;
+  @include dark-mode {
+    background: linear-gradient(180deg, #0e0f20 0%, #2c3576 100%);
+    background-image: url("../assets/themes/img_star.svg"),
+      url("../assets/themes/antarctica/aurora.png");
+    background-repeat: repeat-x, no-repeat;
+    background-position: top, center;
+    background-size: auto, contain;
+    @include portrait-mobile {
+      background-size: auto, cover;
+    }
+    @include portrait {
+      background-size: auto, cover;
+    }
+    @include landscape-mobile {
+      background-size: auto, cover;
+    }
+    @include landscape {
+      background-size: auto, cover;
+    }
+  }
+  .page-bg {
+    background-image: url("../assets/themes/antarctica/img_ice_land.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/antarctica/img_ice_land_d.svg");
+    }
+    .bg-items {
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/themes/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/antarctica/img_ice_l.svg"),
+      url("../assets/themes/antarctica/img_ice_r.svg");
+    background-position: left 0 bottom -10px, right 0 bottom -10px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/antarctica/img_ice_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/antarctica/img_ice_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/antarctica/img_ice_l_dark.svg"),
+        url("../assets/themes/antarctica/img_ice_r_dark.svg");
+      background-position: left 0 bottom -35px, right 0 bottom -10px;
+      @include portrait-mobile {
+        background-image: url("../assets/themes/antarctica/img_ice_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/antarctica/img_ice_l_dark.svg");
+      }
+    }
+  }
+  #listening-activity-1 {
+    .img-hat {
+      &.hat-0 {
+        background-image: url("../assets/themes/antarctica/img_pen_01.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/antarctica/img_bear_01.svg");
+        }
+      }
+      &.hat-1 {
+        background-image: url("../assets/themes/antarctica/img_pen_02.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/antarctica/img_bear_02.svg");
+        }
+      }
+      &.hat-2 {
+        background-image: url("../assets/themes/antarctica/img_pen_03.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/antarctica/img_bear_03.svg");
+        }
+      }
+      &.hat-3 {
+        background-image: url("../assets/themes/antarctica/img_pen_04.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/antarctica/img_bear_04.svg");
+        }
+      }
+      &.hat-4 {
+        background-image: url("../assets/themes/antarctica/img_pen_05.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/antarctica/img_bear_05.svg");
+        }
+      }
+      @include portrait-mobile {
+        height: 40px;
+      }
+      @include landscape {
+        height: 60px;
+      }
+    }
+    .img-pic {
+      &.pic-0 {
+        background-color: #4fa9fd;
+        .word {
+          background-color: #4fa9fd90;
+        }
+      }
+      &.pic-1 {
+        background-color: #914ffd;
+        .word {
+          background-color: #914ffd90;
+        }
+      }
+      &.pic-2 {
+        background-color: #fb75b5;
+        .word {
+          background-color: #fb75b590;
+        }
+      }
+      &.pic-3 {
+        background-color: #f5c93b;
+        .word {
+          background-color: #f5c93b90;
+        }
+      }
+      &.pic-4 {
+        background-color: #aad81a;
+        .word {
+          background-color: #aad81a90;
+        }
+      }
+      @include portrait-mobile {
+        padding: 8px;
+      }
+      img {
+        width: calc(100% - 80px);
+        border-radius: 10px;
+        @include portrait-mobile {
+          width: 100%;
+        }
+        @include portrait {
+          width: 100%;
+        }
+        @include landscape {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+  }
+}
+
+// KA 테마 - 동물원1
+.theme-zoo-1 {
+  @include dark-mode {
+    background-position: top 0;
+    background: url("../assets/images/img_star.svg") repeat-x,
+      linear-gradient(180deg, #0e0f20 19.22%, #350872 100%);
+  }
+  .page-bg {
+    background-image: url("../assets/themes/zoo1/zoo_bg.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/zoo1/zoo_bg_d.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/zoo1/img_zoo_l.svg"),
+      url("../assets/themes/zoo1/img_zoo_r.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 15px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/zoo1/img_zoo_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/zoo1/img_zoo_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/zoo1/img_zoo_l_dark.svg"),
+        url("../assets/themes/zoo1/img_zoo_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/images/img_slide_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/images/img_slide_dark.svg");
+      }
+    }
+  }
+  #listening-activity-1 {
+    .img-hat {
+      &.hat-0 {
+        background-image: url("../assets/themes/zoo1/img_panda_01.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo1/img_gira_01.svg");
+        }
+      }
+      &.hat-1 {
+        background-image: url("../assets/themes/zoo1/img_panda_02.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo1/img_gira_02.svg");
+        }
+      }
+      &.hat-2 {
+        background-image: url("../assets/themes/zoo1/img_panda_03.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo1/img_gira_03.svg");
+        }
+      }
+      &.hat-3 {
+        background-image: url("../assets/themes/zoo1/img_panda_04.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo1/img_gira_04.svg");
+        }
+      }
+      &.hat-4 {
+        background-image: url("../assets/themes/zoo1/img_panda_05.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo1/img_gira_05.svg");
+        }
+      }
+      @include portrait-mobile {
+        height: 40px;
+      }
+      @include landscape {
+        height: 60px;
+      }
+    }
+    .img-pic {
+      &.pic-0 {
+        background-color: #4fa9fd;
+        .word {
+          background-color: #4fa9fd90;
+        }
+        @include dark-mode {
+          background-color: #4fa9fd;
+          .word {
+            background-color: #4fa9fd90;
+          }
+        }
+      }
+      &.pic-1 {
+        background-color: #f5c93b;
+        .word {
+          background-color: #f5c93b90;
+        }
+        @include dark-mode {
+          background-color: #a876fa;
+          .word {
+            background-color: #a876fa90;
+          }
+        }
+      }
+      &.pic-2 {
+        background-color: #914ffd;
+        .word {
+          background-color: #914ffd90;
+        }
+        @include dark-mode {
+          background-color: #fb75b5;
+          .word {
+            background-color: #fb75b590;
+          }
+        }
+      }
+      &.pic-3 {
+        background-color: #aad81a;
+        .word {
+          background-color: #aad81a90;
+        }
+        @include dark-mode {
+          background-color: #da985f;
+          .word {
+            background-color: #da985f90;
+          }
+        }
+      }
+      &.pic-4 {
+        background-color: #fb75b5;
+        .word {
+          background-color: #fb75b590;
+        }
+        @include dark-mode {
+          background-color: #94c300;
+          .word {
+            background-color: #94c30090;
+          }
+        }
+      }
+      @include portrait-mobile {
+        padding: 8px;
+      }
+      img {
+        width: calc(100% - 80px);
+        border-radius: 10px;
+        @include portrait-mobile {
+          width: 100%;
+        }
+        @include portrait {
+          width: 100%;
+        }
+        @include landscape {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+  }
+}
+
+// KA 테마 - 동물원2
+.theme-zoo-2 {
+  @include dark-mode {
+    background-position: top 0;
+    background: url("../assets/images/img_star.svg") repeat-x,
+      linear-gradient(180deg, #0e0f20 19.22%, #350872 100%);
+  }
+  .page-bg {
+    background-image: url("../assets/themes/zoo2/zoo_bg.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/zoo2/zoo_bg_d.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/zoo2/img_zoo_l.svg"),
+      url("../assets/themes/zoo2/img_zoo_r.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 15px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/zoo2/img_zoo_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/zoo2/img_zoo_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/zoo2/img_zoo_l_dark.svg"),
+        url("../assets/themes/zoo2/img_zoo_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/zoo2/img_zoo_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/zoo2/img_zoo_l_dark.svg");
+      }
+    }
+  }
+  #listening-activity-1 {
+    .img-hat {
+      &.hat-0 {
+        background-image: url("../assets/themes/zoo2/img_tiger_01.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo2/img_rhino_01.svg");
+        }
+      }
+      &.hat-1 {
+        background-image: url("../assets/themes/zoo2/img_tiger_02.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo2/img_rhino_02.svg");
+        }
+      }
+      &.hat-2 {
+        background-image: url("../assets/themes/zoo2/img_tiger_03.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo2/img_rhino_03.svg");
+        }
+      }
+      &.hat-3 {
+        background-image: url("../assets/themes/zoo2/img_tiger_04.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo2/img_rhino_04.svg");
+        }
+      }
+      &.hat-4 {
+        background-image: url("../assets/themes/zoo2/img_tiger_05.svg");
+        @include dark-mode {
+          background-image: url("../assets/themes/zoo2/img_rhino_05.svg");
+        }
+      }
+      @include portrait-mobile {
+        height: 40px;
+      }
+      @include landscape {
+        height: 60px;
+      }
+    }
+    .img-pic {
+      &.pic-0 {
+        background-color: #4fa9fd;
+        .word {
+          background-color: #4fa9fd90;
+        }
+        @include dark-mode {
+          background-color: #4fa9fd;
+          .word {
+            background-color: #4fa9fd90;
+          }
+        }
+      }
+      &.pic-1 {
+        background-color: #914ffd;
+        .word {
+          background-color: #914ffd90;
+        }
+        @include dark-mode {
+          background-color: #914ffd;
+          .word {
+            background-color: #914ffd90;
+          }
+        }
+      }
+      &.pic-2 {
+        background-color: #fb75b5;
+        .word {
+          background-color: #fb75b590;
+        }
+        @include dark-mode {
+          background-color: #fb75b5;
+          .word {
+            background-color: #fb75b590;
+          }
+        }
+      }
+      &.pic-3 {
+        background-color: #f5c93b;
+        .word {
+          background-color: #f5c93b90;
+        }
+        @include dark-mode {
+          background-color: #f5c93b;
+          .word {
+            background-color: #f5c93b90;
+          }
+        }
+      }
+      &.pic-4 {
+        background-color: #aad81a;
+        .word {
+          background-color: #aad81a90;
+        }
+        @include dark-mode {
+          background-color: #aad81a;
+          .word {
+            background-color: #aad81a90;
+          }
+        }
+      }
+      @include portrait-mobile {
+        padding: 8px;
+      }
+      img {
+        width: calc(100% - 80px);
+        border-radius: 10px;
+        @include portrait-mobile {
+          width: 100%;
+        }
+        @include portrait {
+          width: 100%;
+        }
+        @include landscape {
+          width: calc(100% - 40px);
+        }
+      }
+    }
+  }
+}
+
+// KB, KC 테마 - 숲속
+.theme-forest {
+  @include dark-mode {
+    background-image: url("../assets/themes/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/forest/img_grass.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/forest/img_grass_dark.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/themes/img_cloud.svg"),
+        url("../assets/themes/img_cloud.svg"),
+        url("../assets/themes/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/themes/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/forest/img_forest_l.svg"),
+      url("../assets/themes/forest/img_forest_r.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 15px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/forest/img_forest_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/forest/img_forest_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/forest/img_forest_l_dark.svg"),
+        url("../assets/themes/forest/img_forest_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/forest/img_forest_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/forest/img_forest_l_dark.svg");
+      }
+    }
+  }
+  #listening-activity-2 {
+    .answer-item {
+      background-image: url("../assets/themes/forest/img_rabbit_default.gif");
+      background-size: 60%;
+      padding-left: 40px;
+      &.correct.type0 {
+        background-image: url("../assets/themes/forest/img_rabbit_01.gif");
+      }
+      &.correct.type1 {
+        background-image: url("../assets/themes/forest/img_rabbit_02.gif");
+      }
+      &.correct.type2 {
+        background-image: url("../assets/themes/forest/img_rabbit_03.gif");
+      }
+      &.correct.type3 {
+        background-image: url("../assets/themes/forest/img_rabbit_04.gif");
+      }
+      &.correct.type4 {
+        background-image: url("../assets/themes/forest/img_rabbit_05.gif");
+      }
+      &.correct.type5 {
+        background-image: url("../assets/themes/forest/img_rabbit_06.gif");
+      }
+      @include dark-mode {
+        background-image: url("../assets/themes/forest/img_tuttle_default.gif");
+        background-size: 60%;
+        padding-left: 40px;
+        &.correct.type0 {
+          background-image: url("../assets/themes/forest/img_tuttle_01.gif");
+        }
+        &.correct.type1 {
+          background-image: url("../assets/themes/forest/img_tuttle_02.gif");
+        }
+        &.correct.type2 {
+          background-image: url("../assets/themes/forest/img_tuttle_03.gif");
+        }
+        &.correct.type3 {
+          background-image: url("../assets/themes/forest/img_tuttle_04.gif");
+        }
+        &.correct.type4 {
+          background-image: url("../assets/themes/forest/img_tuttle_05.gif");
+        }
+        &.correct.type5 {
+          background-image: url("../assets/themes/forest/img_tuttle_06.gif");
+        }
+      }
+      .word {
+        bottom: 6%;
+        @include dark-mode {
+          bottom: 38%;
+          margin-left: 40px;
+          @include portrait-mobile {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// KB, KC 테마 - 키즈룸
+.theme-kids-room {
+  background-color: #fdf2ec;
+  @include dark-mode {
+    background-color: #223173;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/kids_room/img_kid_room_floor.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/kids_room/img_kid_room_floor_d.svg");
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/kids_room/img_kid_room_left_2.svg"),
+      url("../assets/themes/kids_room/img_kid_room_left_1.svg"),
+      url("../assets/themes/kids_room/img_kid_room_right_2.svg"),
+      url("../assets/themes/kids_room/img_kid_room_right_1.svg");
+    background-position: left 5px bottom 15px, left 15px top 20%,
+      right 10px bottom 15px, right 0px top 40%;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/kids_room/img_kid_room_left_2.svg"),
+        url("../assets/themes/kids_room/img_kid_room_left_1.svg");
+      background-position: left 5px bottom 15px, left 15px top 20%;
+    }
+    @include portrait {
+      background-position: left 45px bottom 15px, left 15px top 20%,
+      right 30px bottom 15px, right -150px top 40%;
+    }
+    @include landscape {
+      background-position: left 45px bottom 15px, left 15px top 20%,
+      right 30px bottom 15px, right -60px top 40%;
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/kids_room/img_kid_room_dark_left_2.svg"),
+        url("../assets/themes/kids_room/img_kid_room_dark_left_1.svg"),
+        url("../assets/themes/kids_room/img_kid_room_dark_right_2.svg"),
+        url("../assets/themes/kids_room/img_kid_room_dark_right_1.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/kids_room/img_kid_room_dark_left_2.svg"),
+          url("../assets/themes/kids_room/img_kid_room_dark_left_1.svg");
+        background-position: left 5px bottom 15px, left 15px top 20%;
+      }
+    }
+  }
+  #listening-activity-2 {
+    .answer-item {
+      // background-image: url("../assets/themes/kids_room/img_bear_default.gif");
+      background-size: 60%;
+      padding-left: 40px;
+      &.correct.type0 {
+        background-image: url("../assets/themes/kids_room/img_bear_01.gif");
+      }
+      &.correct.type1 {
+        background-image: url("../assets/themes/kids_room/img_bear_02.gif");
+      }
+      &.correct.type2 {
+        background-image: url("../assets/themes/kids_room/img_bear_03.gif");
+      }
+      &.correct.type3 {
+        background-image: url("../assets/themes/kids_room/img_bear_04.gif");
+      }
+      &.correct.type4 {
+        background-image: url("../assets/themes/kids_room/img_bear_05.gif");
+      }
+      &.correct.type5 {
+        background-image: url("../assets/themes/kids_room/img_bear_06.gif");
+      }
+      @include dark-mode {
+        // background-image: url("../assets/themes/kids_room/img_cat_default.gif");
+        background-size: 60%;
+        padding-left: 40px;
+        &.correct.type0 {
+          background-image: url("../assets/themes/kids_room/img_cat_01.gif");
+        }
+        &.correct.type1 {
+          background-image: url("../assets/themes/kids_room/img_cat_02.gif");
+        }
+        &.correct.type2 {
+          background-image: url("../assets/themes/kids_room/img_cat_03.gif");
+        }
+        &.correct.type3 {
+          background-image: url("../assets/themes/kids_room/img_cat_04.gif");
+        }
+        &.correct.type4 {
+          background-image: url("../assets/themes/kids_room/img_cat_05.gif");
+        }
+        &.correct.type5 {
+          background-image: url("../assets/themes/kids_room/img_cat_06.gif");
+        }
+      }
+      .word {
+        bottom: 20%;
+      }
+    }
+  }
+}
+
+// KB, KC 테마 - 우주
+.theme-space {
+  @include dark-mode {
+    background-image: url("../assets/themes/space/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+    background-color: #07004d;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/space/img_rocket_land.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/space/img_planet_land_01.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/themes/img_cloud.svg"),
+        url("../assets/themes/img_cloud.svg"),
+        url("../assets/themes/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: none;
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/space/img_rocket_l.svg"),
+      url("../assets/themes/space/img_rocket_r.svg");
+    background-position: left 0 bottom 35px, right 0 bottom 35px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/space/img_rocket_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/space/img_rocket_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/space/img_planet_l.svg"),
+        url("../assets/themes/space/img_planet_land_02.svg"),
+        url("../assets/themes/space/img_planet_r.svg");
+      background-position: left 0 bottom 10px, center bottom, right 0 bottom 5px;
+      @include portrait-mobile {
+        background-image: url("../assets/themes/space/img_planet_l.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/space/img_planet_l.svg");
+      }
+    }
+  }
+  #listening-activity-2 {
+    .answer-item {
+      background-image: url("../assets/themes/space/img_rocket_default.gif");
+      background-size: 60%;
+      padding-left: 40px;
+      &.correct.type0 {
+        background-image: url("../assets/themes/space/img_rocket_01.gif");
+      }
+      &.correct.type1 {
+        background-image: url("../assets/themes/space/img_rocket_02.gif");
+      }
+      &.correct.type2 {
+        background-image: url("../assets/themes/space/img_rocket_03.gif");
+      }
+      &.correct.type3 {
+        background-image: url("../assets/themes/space/img_rocket_04.gif");
+      }
+      &.correct.type4 {
+        background-image: url("../assets/themes/space/img_rocket_05.gif");
+      }
+      &.correct.type5 {
+        background-image: url("../assets/themes/space/img_rocket_06.gif");
+      }
+      @include dark-mode {
+        background-image: url("../assets/themes/space/img_astro_default.gif");
+        background-size: 60%;
+        padding-left: 40px;
+        &.correct.type0 {
+          background-image: url("../assets/themes/space/img_astro_01.gif");
+        }
+        &.correct.type1 {
+          background-image: url("../assets/themes/space/img_astro_02.gif");
+        }
+        &.correct.type2 {
+          background-image: url("../assets/themes/space/img_astro_03.gif");
+        }
+        &.correct.type3 {
+          background-image: url("../assets/themes/space/img_astro_04.gif");
+        }
+        &.correct.type4 {
+          background-image: url("../assets/themes/space/img_astro_05.gif");
+        }
+        &.correct.type5 {
+          background-image: url("../assets/themes/space/img_astro_06.gif");
+        }
+      }
+      .word {
+        bottom: 10%;
+        @include dark-mode {
+          bottom: 35%;
+        }
+      }
+    }
+  }
+}
+
+// KB, KC 테마 - 농장
+.theme-farm {
+  background-color: #fff3df;
+  @include dark-mode {
+    background-image: url("../assets/themes/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+    background-color: #0e0f20;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/farm/img_farm_land.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/farm/img_farm_land_dark.svg");
+    }
+    .bg-items {
+      background-repeat: no-repeat;
+      @include dark-mode {
+        background-image: url("../assets/themes/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/farm/img_farm_l.svg"),
+      url("../assets/themes/farm/img_farm_r.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 15px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/farm/img_farm_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/farm/img_farm_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/farm/img_farm_l_dark.svg"),
+        url("../assets/themes/farm/img_farm_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/farm/img_farm_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/farm/img_farm_l_dark.svg");
+      }
+    }
+  }
+  #listening-activity-2 {
+    .answer-item {
+      background-image: url("../assets/themes/farm/img_chicken_default.gif");
+      background-size: 60%;
+      padding-left: 40px;
+      &.correct.type0 {
+        background-image: url("../assets/themes/farm/img_chicken_01.gif");
+      }
+      &.correct.type1 {
+        background-image: url("../assets/themes/farm/img_chicken_02.gif");
+      }
+      &.correct.type2 {
+        background-image: url("../assets/themes/farm/img_chicken_03.gif");
+      }
+      &.correct.type3 {
+        background-image: url("../assets/themes/farm/img_chicken_04.gif");
+      }
+      &.correct.type4 {
+        background-image: url("../assets/themes/farm/img_chicken_05.gif");
+      }
+      &.correct.type5 {
+        background-image: url("../assets/themes/farm/img_chicken_06.gif");
+      }
+      @include dark-mode {
+        background-image: url("../assets/themes/farm/img_owl_default.gif");
+        background-size: 60%;
+        padding-left: 40px;
+        &.correct.type0 {
+          background-image: url("../assets/themes/farm/img_owl_01.gif");
+        }
+        &.correct.type1 {
+          background-image: url("../assets/themes/farm/img_owl_02.gif");
+        }
+        &.correct.type2 {
+          background-image: url("../assets/themes/farm/img_owl_03.gif");
+        }
+        &.correct.type3 {
+          background-image: url("../assets/themes/farm/img_owl_04.gif");
+        }
+        &.correct.type4 {
+          background-image: url("../assets/themes/farm/img_owl_05.gif");
+        }
+        &.correct.type5 {
+          background-image: url("../assets/themes/farm/img_owl_06.gif");
+        }
+      }
+      .word {
+        bottom: 10%;
+        @include dark-mode {
+          bottom: 25%;
+        }
+      }
+    }
+  }
+}
+
+// 1A 이상 테마 - 봄
+.theme-season-spring {
+  @include dark-mode {
+    background-image: url("../assets/images/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/season_spring/img_blossom_land.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/season_spring/img_blossom_land_dark.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/season_spring/img_blossom_l.svg"),
+      url("../assets/themes/season_spring/img_blossom_r.svg");
+    background-position: left 0 bottom 5px, right 0 bottom 5px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/season_spring/img_blossom_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/season_spring/img_blossom_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/season_spring/img_blossom_l_dark.svg"),
+        url("../assets/themes/season_spring/img_blossom_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/season_spring/img_blossom_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/season_spring/img_blossom_l_dark.svg");
+      }
+    }
+  }
+}
+
+// 1A 이상 테마 - 여름
+.theme-season-summer {
+  @include dark-mode {
+    background-image: url("../assets/images/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/season_summer/img_ground.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/season_summer/img_ground_dark.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/season_summer/img_parasol.svg"),
+      url("../assets/themes/season_summer/img_mountain.svg");
+    background-position: left 0 bottom 30px, right 0 bottom 33px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/season_summer/img_parasol.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/season_summer/img_parasol.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/season_summer/img_parasol_dark.svg"),
+        url("../assets/themes/season_summer/img_mountain_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/season_summer/img_parasol_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/season_summer/img_parasol_dark.svg");
+      }
+    }
+  }
+}
+
+// 1A 이상 테마 - 가을
+.theme-season-autumn {
+  background-color: #f4f7f8;
+  @include dark-mode {
+    background-image: url("../assets/images/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+    background-color: #0e0f20;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/season_autumn/img_autumn_grass.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/season_autumn/img_autumn_grass_dark.svg");
+    }
+    .bg-items {
+      background-repeat: no-repeat;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/season_autumn/img_autumn_mountain.svg"),
+      url("../assets/themes/season_autumn/img_autumn_tree.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 10px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/season_autumn/img_autumn_mountain.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/season_autumn/img_autumn_mountain.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/season_autumn/img_autumn_mountain_dark.svg"),
+        url("../assets/themes/season_autumn/img_autumn_tree_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/season_autumn/img_autumn_mountain_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/season_autumn/img_autumn_mountain_dark.svg");
+      }
+    }
+  }
+}
+
+// 1A 이상 테마 - 겨울
+.theme-season-winter {
+  background-color: #e9ecee;
+  @include dark-mode {
+    background-image: url("../assets/images/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+    background-color: #0e0f20;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/season_winter/img_snow_land.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/season_winter/img_snow_land_dark.svg");
+    }
+    .bg-items {
+      background-repeat: no-repeat;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/season_winter/img_snow_l.svg"),
+      url("../assets/themes/season_winter/img_snow_r.svg");
+    background-position: left 0 bottom 40px, right 0 bottom 40px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/season_winter/img_snow_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/season_winter/img_snow_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/season_winter/img_snow_l_dark.svg"),
+        url("../assets/themes/season_winter/img_snow_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/season_winter/img_snow_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/season_winter/img_snow_l_dark.svg");
+      }
+    }
+  }
+}
+
+// 1A 이상 테마 - 놀이터
+.theme-playground {
+  @include dark-mode {
+    background-image: url("../assets/images/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/playground/img_playg.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/playground/img_playg_dark.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/playground/img_slide.svg"),
+      url("../assets/themes/playground/img_swing.svg");
+    background-position: left 0 bottom 15px, right 0 bottom 15px;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/playground/img_slide.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/playground/img_slide.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/playground/img_slide_dark.svg"),
+        url("../assets/themes/playground/img_swing_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/playground/img_slide_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/playground/img_slide_dark.svg");
+      }
+    }
+  }
+}
+
+// 1A 이상 테마 - 캠핑
+.theme-camping {
+  @include dark-mode {
+    background-image: url("../assets/images/img_star.svg");
+    background-repeat: repeat-x;
+    background-position: top 0;
+  }
+  .page-bg {
+    background-image: url("../assets/themes/camping/img_camping_land.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    @include dark-mode {
+      background-image: url("../assets/themes/camping/img_camping_land_dark.svg");
+    }
+    .bg-items {
+      background-image: url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg"),
+        url("../assets/images/img_cloud.svg");
+      background-position: top 10% left 10%, top 50% right 10%,
+        top 60% right 20%;
+      background-repeat: no-repeat;
+      background-size: 200px, 150px, 120px;
+      @include dark-mode {
+        background-image: url("../assets/images/img_moon.svg");
+        background-position: top 10% right 10%;
+        background-size: 100px;
+        @include portrait-mobile {
+          background-image: none;
+        }
+        @include landscape-mobile {
+          background-image: none;
+        }
+      }
+    }
+  }
+  .page-body {
+    background-image: url("../assets/themes/camping/img_camping_l.svg"),
+      url("../assets/themes/camping/img_camping_r.svg");
+    background-position: left bottom 8px, right bottom;
+    background-repeat: no-repeat;
+    @include portrait-mobile {
+      background-image: url("../assets/themes/camping/img_camping_l.svg");
+    }
+    @include landscape-mobile {
+      background-image: url("../assets/themes/camping/img_camping_l.svg");
+    }
+    @include dark-mode {
+      background-image: url("../assets/themes/camping/img_camping_l_dark.svg"),
+        url("../assets/themes/camping/img_camping_r_dark.svg");
+      @include portrait-mobile {
+        background-image: url("../assets/themes/camping/img_camping_l_dark.svg");
+      }
+      @include landscape-mobile {
+        background-image: url("../assets/themes/camping/img_camping_l_dark.svg");
+      }
+    }
+  }
+}
